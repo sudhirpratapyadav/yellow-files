@@ -3,7 +3,8 @@
 2 step process (for better quality)
 
 Step 1.
-```ffmpeg -i input_video.webm -vf "fps=10,scale=720:-1:flags=lanczos,palettegen" palette.png
+```
+ffmpeg -i input_video.webm -vf "fps=10,scale=720:-1:flags=lanczos,palettegen" palette.png
 ```
 
 Step 2.
