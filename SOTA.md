@@ -1,0 +1,49 @@
+- Why Manipulation
+	- Because it is hard
+		- Humungous Hand
+	- Useful
+	- separates us from animals (tool use)
+- Link between animals and us
+	- locomotion -> solved using RL videos
+		- https://www.youtube.com/watch?v=iL833P0Vino (deep robotics)
+		- Other works
+		- RMA and similar
+		- Low variation
+		- RL
+- Manipulation and Vision?
+- Can we do manipulation without vision
+	- touch based?
+- sensors
+	- Vision -> RGB, Depth, Pointcloud
+	- touch
+		- meta, digit, skin etc
+- Representations
+	- Direct, keypoints
+- Ideas/frameworks
+	- End to End
+	- Intermediate
+	- Old School
+	- LLM based
+	- Liquid NN
+- Ongoing
+	- Multitask
+- Success
+	- Imitation learning
+	- single policy kind of work now
+- Failures
+	- Degrade over time
+	- Less robust to env changes
+	- Robustness require huge data
+		- Real vs Sim
+	- Delicate/precise/dynamic tasks
+		- May be solved using sim
+- Sim to Real Gap
+- Tools
+	- Simulators
+	- Real data
+	- Teleop
+- RL vs Imitation
+- Reward, preferemces
+
+Some actual practical cases 
+- just pick a object
