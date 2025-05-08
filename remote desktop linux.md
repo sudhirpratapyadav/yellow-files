@@ -39,6 +39,16 @@ DISPLAY=:1 xfce4-session &
 	- `ps aux | grep Xvfb`
 	- then use `kill -9 <pid>` where `<pid>` is from the above command
 
+##### Option 4
+Xvfb :99 -screen 0 1024x768x24 &
+export DISPLAY=:99
+
+# Start the desktop environment
+startxfce4 &
+
+# Then run x11vnc (in new ssh terminal)
+x11vnc -display :99 -forever -shared &
+
 #### On local PC
 ```
 sudo apt install tigervnc-viewer
