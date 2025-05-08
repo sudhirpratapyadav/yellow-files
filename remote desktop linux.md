@@ -40,10 +40,12 @@ DISPLAY=:1 xfce4-session &
 	- then use `kill -9 <pid>` where `<pid>` is from the above command
 
 ##### Option 4
+```
 unset XAUTHORITY
 unset DISPLAY
 export DISPLAY=:1
 sudo -u user DISPLAY=:1 XAUTHORITY=/run/user/1000/gdm/Xauthority x11vnc -display :1 -auth /run/user/1000/gdm/Xauthority -forever -shared -ncache 10
+```
 
 ##### Option 5
 1. Run Virtual Framebuffer X Server
