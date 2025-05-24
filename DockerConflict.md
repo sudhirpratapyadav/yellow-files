@@ -113,7 +113,7 @@ docker stop $(docker ps -q)  # Stop all running containers
 Remove existing custom networks that use conflicting subnets:
 ```bash
 docker network ls
-docker network rm projectname_default  # Replace with actual network name
+docker network rm netowrk_name  # Replace with actual network name
 ```
 
 ### **3. Restart Docker**
