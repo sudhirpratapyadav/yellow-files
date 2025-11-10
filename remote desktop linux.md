@@ -7,7 +7,7 @@ x11vnc -storepasswd
 x11vnc -rfbauth ~/.vnc/passwd -display :1 -forever -shared -geometry 1280x800
 ```
 - without password: `x11vnc -display :1 -forever -shared -geometry 1328x830`
-- Find display automatically: `x11vnc -find -forever -shared -geometry 1328x830
+- Find display automatically: `x11vnc -find -forever -shared -geometry 1328x830`
 
 In case this doesn't work change display number from 1 to 0 or 2
 
@@ -19,7 +19,7 @@ If you are not logged in the computer (manually once) then use one of the follow
 	- `root        1428  0.1  0.0 27628360 127872 tty1  Sl+  14:42   0:09 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/125/gdm/Xauthority -background none -noreset -keeptty -verbose 3`
 	- This means the auth file is `/run/user/125/gdm/Xauthority`
 - Now run the following command
-	- `sudo x11vnc -auth /run/user/125/gdm/Xauthority -display :0 -forever -shared
+    - `sudo x11vnc -auth /run/user/125/gdm/Xauthority -display :0 -forever -shared -nopw -noshm`
 	- This will require the main password. After this log into to the computer (via remote vnc on your local pc mentioned below)
 - If you see black screen after logging in the close the vnc server and run the following command again
 	- `x11vnc -display :1 -forever -shared`
