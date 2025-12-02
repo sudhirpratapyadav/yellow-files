@@ -25,6 +25,10 @@ If you are not logged in the computer (manually once) then use one of the follow
 	- `x11vnc -display :1 -forever -shared`
 	- This happens because your display changes once you log in
 	- Find display automatically: `x11vnc -find -forever -shared -geometry 1328x830
+Single command for this is
+```bash
+sudo x11vnc -auth "$(ps aux | grep '[X]org' | grep -oP ' -auth \K\S+')" -display :0 -forever -shared -nopw -noshm
+```
 
 ##### Option 3
 If still doesn't work
