@@ -1,0 +1,25 @@
+STEP 2: In live session terminal:
+    sudo apt update && sudo apt install -y gparted
+    sudo e2fsck -f /dev/nvme0n1p6
+    sudo e2fsck -f /dev/nvme0n1p4
+
+  STEP 3:
+    sudo gparted /dev/nvme0n1
+    - Right-click partition 4 (/data, ext4) -> Delete
+    - Right-click partition 6 (/, ext4) -> Resize/Move -> drag left edge all the way left -> Resize/Move
+    - Apply All Operations (confirm)
+    - Wait for it to finish (NVMe, expect ~5-20 min)
+
+  STEP 4: Fix fstab from live session (if not already commented out):
+    sudo mkdir -p /mnt/root
+    sudo mount /dev/nvme0n1p6 /mnt/root
+    sudo nano /mnt/root/etc/fstab      # remove/comment the /data line
+    sudo umount /mnt/root
+
+  STEP 5: Remove USB, reboot normally, verify:
+    df -h /
+    # should show ~465G single root partition
+
+  Cleanup after confirming all is well:
+    rmdir /data
+
